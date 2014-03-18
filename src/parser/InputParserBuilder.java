@@ -13,6 +13,18 @@ import textualObject.Token;
  * a correspondent list of textual objects (objects Token). These textual objects
  * are an acceptable input to the parsing of a FSA object.
  * 
+ * Every input String tag is mapped into a list of features. The class assumes that every single
+ * character in the input tag corresponds to the value of a different feature. The attribute
+ * of every feature is the numerical position of its correspondent value in the original String
+ * (The first position is always 0). FSA declarations intended to deal with this kind of input
+ * must use these guidelines.
+ * 
+ * For example: the tag 'TV'(transitive verb) will be mapped into the following list of features:
+ * [ [ 0 => T ], [ 1 => V ]].
+ * 
+ * Every list of features is introduced into a Type object, and that type is introduced into a
+ * Token object. 
+ * 
  * @author benjamin
  *
  */
