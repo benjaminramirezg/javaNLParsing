@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE FSA SYSTEM "./FSA.dtd">
+
+<FSA>
+<states>
+<state id="1" isFinalState="false" isInitialState="true" message=" "/>
+<state id="2" isFinalState="false" isInitialState="false" message="B-NP"/>
+<state id="3" isFinalState="true" isInitialState="false" message="I-NP"/>
+</states>
+
+<arcs>
+<arc initialState="1" finalState="2" tag="1"/>
+<arc initialState="2" finalState="3" tag="2"/>
+</arcs>
+
+<tags>
+
+<type id="1" name="det">
+<feature name="0">
+<value value="D"/>
+</feature>
+<feature name="1"> 
+<value value="A"/>
+</feature>
+</type>
+
+<type id="2" name="noun">
+<feature name="0">
+<value value="N"/>
+</feature>
+<feature name="1">
+<value value="C"/>
+</feature>
+</type>
+
+</tags>
+
+</FSA>

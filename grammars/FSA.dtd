@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT FSA (states,arcs,tags)>
+<!ELEMENT states (state+)>
+<!ELEMENT arcs (arc+)>
+<!ELEMENT tags (type+)>
+<!ELEMENT state EMPTY>
+<!ELEMENT arc EMPTY>
+<!ELEMENT type (feature+)>
+<!ELEMENT feature (value+)>
+<!ELEMENT value EMPTY>
+
+<!ATTLIST state id CDATA #REQUIRED>
+<!ATTLIST state isFinalState (true|false) #REQUIRED>
+<!ATTLIST state isInitialState (true|false) #REQUIRED>
+<!ATTLIST state message CDATA #REQUIRED>
+
+<!ATTLIST arc initialState  CDATA #REQUIRED>
+<!ATTLIST arc finalState  CDATA #REQUIRED>
+<!ATTLIST arc tag CDATA #REQUIRED>
+
+<!ATTLIST type id CDATA #REQUIRED>
+<!ATTLIST type name CDATA #REQUIRED>
+
+<!ATTLIST feature name  CDATA #REQUIRED>
+<!ATTLIST value value  CDATA #REQUIRED>
